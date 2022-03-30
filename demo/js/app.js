@@ -24,7 +24,8 @@ inputBox.onkeyup = (e)=>{
             // Passing the return data to the li tag
             return data = `<li>${data}</li>`;
         });
-        searchWrapper.classList.add("active"); // Autocomplete Box
+        searchWrapper.classList.add("active"); 
+        // Autocomplete Box
         showSuggestions(emptyArray);
         let allList = suggBox.querySelectorAll("li");
         for (let i = 0; i < allList.length; i++) {
@@ -32,7 +33,8 @@ inputBox.onkeyup = (e)=>{
             allList[i].setAttribute("onclick", "select(this)");
         }
     }else{
-        searchWrapper.classList.remove("active"); // Hides the Autocomplete Box
+        searchWrapper.classList.remove("active"); 
+        // Hides the Autocomplete Box
     }
 }
 
@@ -56,5 +58,4 @@ function showSuggestions(list){
       listData = list.join('');
     }
     suggBox.innerHTML = listData;
-}
 }
